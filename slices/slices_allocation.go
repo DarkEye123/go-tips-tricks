@@ -36,4 +36,10 @@ func main() {
 	fmt.Println("Printing reference slice:", reference)
 	fmt.Println("Printing example1 slice:", example1)
 	fmt.Println("Printing example2 slice:", example2) //this is not changed, because it cointains different underlying array
+
+	fmt.Println("###############")
+	capTest := reference[1:3:3] // sets capacity to 2
+	fmt.Println("Printing capTest slice:", capTest)
+	fmt.Println("Printing capacity capTest slice:", cap(capTest))
+
 }
