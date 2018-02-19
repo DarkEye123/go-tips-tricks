@@ -44,8 +44,13 @@ func main() {
 	n = NewBasicNode()
 	n.SetValue(10)
 	fmt.Println("Node value is:", n.GetValue())
+
 	n = NewPowerNode()
 	n.SetValue(10)
 	fmt.Println("Node value is:", n.GetValue())
+
+	if _, ok := n.(*PowerNode); ok {
+		fmt.Println("n is of PowerNode type")
+	}
 
 }
