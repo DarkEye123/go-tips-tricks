@@ -8,6 +8,9 @@ func main() {
 	for s := range c {
 		fmt.Println(s)
 	}
+	if _, ok := <-c; !ok {
+		fmt.Println("Channel was closed")
+	}
 }
 
 func hiFiveNtimes(c chan string, times int) {
