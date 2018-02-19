@@ -35,6 +35,10 @@ func (n *PowerNode) SetValue(val int) {
 	n.value = val * val
 }
 
+func (n *PowerNode) String() string {
+	return fmt.Sprintf("PowerNode value: {%d}", n.value)
+}
+
 func NewPowerNode() *PowerNode {
 	return new(PowerNode)
 }
@@ -48,6 +52,9 @@ func main() {
 	n = NewPowerNode()
 	n.SetValue(10)
 	fmt.Println("Node value is:", n.GetValue())
+
+	//calling Springer interface
+	fmt.Println(n)
 
 	if _, ok := n.(*PowerNode); ok {
 		fmt.Println("n is of PowerNode type")
