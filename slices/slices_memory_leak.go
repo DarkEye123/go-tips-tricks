@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("comparation of what reference and buggy can see")
 	fmt.Println(reference[:cap(reference)], "vs", buggy[:cap(buggy)])
 
-	fmt.PRintln("##############")
+	fmt.Println("##############")
 
 	correct := correctSlice(reference) // returns first two pointers
 	fmt.Println("comparation of what reference and correct can see")
